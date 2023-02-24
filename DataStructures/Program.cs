@@ -33,7 +33,20 @@ namespace DataStructures
             std.FirstName = "Ali";
             std.LastName = "Biner";
             std.Gender = "Erkek";
+
+            Student std2 = new Student()
+            {
+                Number = 20,
+                FirstName = "Zehra",
+                LastName = "Kardelen",
+                Gender = "Kadın"
+            };
+
+            Student std3 = new Student(30,"Mert","Derviş","Erkek");
+
             Console.WriteLine($"{std.Number} {std.FirstName} {std.LastName} {std.Gender}" );
+            Console.WriteLine($"{std2.Number} {std2.FirstName} {std2.LastName} {std2.Gender}" );
+            Console.WriteLine($"{std3.Number} {std3.FirstName} {std3.LastName} {std3.Gender}" );
             Console.ReadKey();
         }
     }
