@@ -6,18 +6,25 @@ using System.Threading.Tasks;
 
 namespace DataStructures
 {
-    //Struct - Defining
     public class Program
     {
         public static void Main(string[] args)
         {
-            Dots dt = new Dots(3,4);
-            Console.WriteLine(dt);
-            dt.Excahnge();
-            Console.WriteLine(dt);
+            Academician acd = new Academician(10,"Ali","Biner",true);
+
+            Console.WriteLine(acd);
             
-            Console.ReadKey();
         }
+
+        //public static void Main(string[] args)
+        //{
+        //    Dots dt = new Dots(3,4);
+        //    Console.WriteLine(dt);
+        //    dt.Excahnge();
+        //    Console.WriteLine(dt);
+            
+        //    Console.ReadKey();
+        //}
 
 
         ////Struct - Using
