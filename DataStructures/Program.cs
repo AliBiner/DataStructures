@@ -10,10 +10,35 @@ namespace DataStructures
     {
         public static void Main(string[] args)
         {
-            Academician acd = new Academician(10,"Ali","Biner",true);
+            List<Academician> List1 = new List<Academician>()
+            {
+                new Academician(10,"Ali","Biner",true),
+                new Academician(11,"Mert","Gündoğan",true),
+                new Academician(12,"Ayşe","Biner"),
+                new Academician(13,"Şeyma","Esen")
+            };
 
-            Console.WriteLine(acd);
-            
+            List<Academician> List2 = List1;
+
+            Academician.Print(List1);
+            Console.WriteLine("---------");
+            Academician.Print(List2);
+            Console.WriteLine("---------");
+
+            List2.Add(new Academician(14,"Derviş","Doğan",true));
+            List2.RemoveAt(0);
+
+            Console.ReadKey();
+
+            Academician.Print(List1);
+            Console.WriteLine("---------");
+            Academician.Print(List2);
+            Console.WriteLine("---------");
+
+            Console.ReadKey();
+
+
+
         }
 
         //public static void Main(string[] args)
@@ -22,7 +47,7 @@ namespace DataStructures
         //    Console.WriteLine(dt);
         //    dt.Excahnge();
         //    Console.WriteLine(dt);
-            
+
         //    Console.ReadKey();
         //}
 

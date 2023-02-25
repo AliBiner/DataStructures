@@ -15,11 +15,10 @@ namespace DataStructures
 
         public Academician()
         {
-            Console.WriteLine("Otomatik Çalıştı.");
         }
         public Academician(int registrationNumber = 0, string firstName = null, string lastName = null, bool gender = false)
         {
-            Console.WriteLine("Otomatik Çalıştı.");
+            
             RegistrationNumber = registrationNumber;
             FirstName = firstName;
             LastName = lastName;
@@ -31,6 +30,15 @@ namespace DataStructures
         {
             return $"{RegistrationNumber,-5} {FirstName,-10} {LastName,-10}" +
                    string.Format("{0,-8}",Gender == true ? "Erkek" : "Kadın");
+        }
+
+
+        public static void Print(List<Academician> list)
+        {
+            foreach (var VARIABLE in list)
+            {
+                Console.WriteLine(VARIABLE);
+            }
         }
     }
 }
