@@ -7,46 +7,51 @@ using System.Threading.Tasks;
 namespace DataStructures
 {
     //Struct - Defining
-    public struct Student
-    {
-        //Struct - Constructor
-        public Student(int number, string firstName, string lastName, string gender)
-        {
-            Number = number;
-            FirstName = firstName;
-            LastName = lastName;
-            Gender = gender;
-        }
-
-        public int Number { get; set; } //Property
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public string Gender { get; set; }
-    }
     public class Program
     {
         //Struct - Using
         public static void Main(string[] args)
         {
-            Student std = new Student();
-            std.Number = 10;
-            std.FirstName = "Ali";
-            std.LastName = "Biner";
-            std.Gender = "Erkek";
+            //Student std = new Student();
+            //std.Number = 10;
+            //std.FirstName = "Ali";
+            //std.LastName = "Biner";
+            //std.Gender = "Erkek";
 
-            Student std2 = new Student()
+            //Student std2 = new Student()
+            //{
+            //    Number = 20,
+            //    FirstName = "Zehra",
+            //    LastName = "Kardelen",
+            //    Gender = "Kadın"
+            //};
+
+            //Student std3 = new Student(30,"Mert","Derviş","Erkek");
+
+            //Method using with non-override
+            //Console.WriteLine($"{std.Number} {std.FirstName} {std.LastName} {std.Gender}" );
+            //Console.WriteLine($"{std2.Number} {std2.FirstName} {std2.LastName} {std2.Gender}" );
+            //Console.WriteLine($"{std3.Number} {std3.FirstName} {std3.LastName} {std3.Gender}" );
+
+            //Method using with override
+            //Console.WriteLine(std);
+            //Console.WriteLine(std2);
+            //Console.WriteLine(std3);
+
+            List<Student> stdList = new List<Student>()
             {
-                Number = 20,
-                FirstName = "Zehra",
-                LastName = "Kardelen",
-                Gender = "Kadın"
+                new Student(10,"Ali","Biner"),
+                new Student(20,"Ayşe","Demir","Kadın"),
+                new Student(30,"Mert","Derviş","Erkek")
             };
 
-            Student std3 = new Student(30,"Mert","Derviş","Erkek");
+            foreach (var VARIABLE in stdList)
+            {
+                Console.WriteLine(VARIABLE);
+            }
 
-            Console.WriteLine($"{std.Number} {std.FirstName} {std.LastName} {std.Gender}" );
-            Console.WriteLine($"{std2.Number} {std2.FirstName} {std2.LastName} {std2.Gender}" );
-            Console.WriteLine($"{std3.Number} {std3.FirstName} {std3.LastName} {std3.Gender}" );
+            stdList.ForEach(o=> Console.WriteLine(o));
+
             Console.ReadKey();
         }
     }
